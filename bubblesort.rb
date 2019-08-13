@@ -12,16 +12,17 @@ def bubble_sort(array)
   array 
 end
 
-def bubble_sort_by(array) 
-  switch = true
-  while switch
-    for i in (0...array.length - 1)
-      result = yield(array[i],array[i + 1])
-      if result > 0
-        array[i], array[i + 1] = array[i + 1], array[i]
-      else 
-        switch = false
-      end
+def bubble_sort_by(array)
+  for element in (0...array.length - 1)
+    for item in (0...array.length - 1)
+      array[item], array[item +1] = array[item +1],array[item] if yield(array[item], array[item + 1]) > 0
     end
-  end  
+  end
+  return array
 end
+
+
+a =bubble_sort_by(['hi','hello','hey']) do |left,right|
+  left.length - right.length
+end
+print a
