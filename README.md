@@ -8,4 +8,8 @@ Full task description: https://www.theodinproject.com/courses/ruby-programming/l
 # Microverse Adjustments
 In this step build only Project 1.
 
+<<<<<<< HEAD
 # Collaborators: Salim Habibu and Elukoye
+=======
+# Collaborators: Salim Habibu and Elukoye
+>>>>>>> feature
